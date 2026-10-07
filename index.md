@@ -6,7 +6,7 @@ layout: homepage
 
 I'm an M.Sc. student in Computer Science at [ETH Zürich](https://ethz.ch/en.html), working on LLM post-training methods in Prof. [Andreas Krause](https://las.inf.ethz.ch/krausea)'s [Learning & Adaptive Systems group](https://las.inf.ethz.ch/). I'm supervised by Jonas Hübotter, Frederike Lübeck and Thomas Kleine Buening. My recent work focuses on self-distillation for reasoning and self-play for code generation.
 
-Previously, I interned at Google in London, where I designed and prototyped a new tool and contributed code to the Gemini Live agent harness, and at Huawei's Zurich Research Center, where I worked on kernel-level optimization for LLM inference.
+Previously, I interned at Google in London, where I designed and prototyped a new tool and contributed code to the [**Gemini Live**](https://gemini.google/overview/gemini-live/) agent harness, and at Huawei's Zurich Research Center, where I worked on kernel-level optimization for LLM inference.
 
 Always happy to chat-feel free to reach out!
 
@@ -29,7 +29,7 @@ Always happy to chat-feel free to reach out!
     <img class="company-logo" src="{{ '/assets/img/companies/google.png' | relative_url }}" alt="" width="24" height="24">
     <div>
       <div class="entry-head"><span><strong>Google</strong>, London · SWE Intern, Applied Research team</span><span class="entry-date">Jun. – Sep. 2026</span></div>
-      <div class="entry-body">Designed and prototyped a new tool and contributed code to the Gemini Live agent harness.</div>
+      <div class="entry-body">Designed and prototyped a new tool and contributed code to the <a href="https://gemini.google/overview/gemini-live/" target="_blank" rel="noopener"><strong>Gemini Live</strong></a> agent harness.</div>
     </div>
   </li>
   <li class="experience-entry">
