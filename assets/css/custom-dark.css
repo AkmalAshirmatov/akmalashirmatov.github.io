@@ -1,0 +1,10 @@
+/* Dark-mode variants for custom.css (loaded only when auto_dark_mode is on). */
+@media (prefers-color-scheme: dark) {
+  .publications ol.bibliography li .title a { color: #eeeff0; }
+  .publications ol.bibliography li .title a:hover { color: rgb(62, 183, 240); }
+  .publications ol.bibliography li .teaser { box-shadow: 3px 3px 6px #000; }
+  .award { border-color: rgb(62, 183, 240); }
+  .award-kind { background: rgb(62, 183, 240); color: #20212b; }
+  .award-venue { color: rgb(62, 183, 240); }
+  .entry-date { color: #9a9ba3; }
+}

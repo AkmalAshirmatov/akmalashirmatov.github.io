@@ -1,0 +1,37 @@
+# Basic Information
+title: Akmal Ashirmatov
+position: M.Sc. Student
+affiliation: ETH Zürich
+affiliation_link: https://ethz.ch/en.html
+email: akmalashirmatov@gmail.com
+
+# Search Engine Optimization (SEO)
+keywords: Akmal Ashirmatov, ETH Zurich, LLM post-training, self-distillation, reasoning, self-play, code generation, reinforcement learning, machine learning
+description: Akmal Ashirmatov — M.Sc. student at ETH Zürich working on LLM post-training, self-distillation for reasoning, and self-play for code generation.
+canonical: https://akmalashirmatov.github.io/
+
+# Links (delete a line to hide its icon)
+google_scholar: https://scholar.google.com/citations?user=TgXmbVgAAAAJ
+cv_link: assets/files/Akmal_Ashirmatov_CV.pdf
+github_link: https://github.com/AkmalAshirmatov
+linkedin: https://www.linkedin.com/in/akmal-ashirmatov/
+
+# Images
+avatar: ./assets/img/avatar.jpg
+favicon: ./assets/img/favicon-blank.svg
+
+# Footnote ("Powered by Jekyll and Minimal Light theme.")
+enable_footnote: false
+
+# Automatic dark theme (follows the visitor's system setting)
+auto_dark_mode: false
+
+# Font: "Serif" or "Sans Serif"
+font: "Serif"
+
+# Files that are not published
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

@@ -1,0 +1,52 @@
+# Publications shown on the homepage, newest first.
+# Fields:
+#   title, url       – paper title and where the title links to
+#   authors          – HTML allowed; wrap your own name in <strong>…</strong>
+#   venue            – short venue line, e.g. "NeurIPS 2026 · FLLMPT workshop"
+#   workshop, conference – optional venue shown as Workshop @ Conference
+#   note             – optional text after the venue (e.g. "*equal contribution")
+#   image, image_alt – teaser figure, displayed at its natural proportions
+#   links            – buttons under the entry (label + url)
+#   awards           – badges: kind (Oral / Poster / Best Paper …), optional venue
+
+main:
+
+  - title: "On Repulsive and Attractive Teachers: Separating Correctness from Behavior in Self-Distillation"
+    url: https://arxiv.org/abs/2609.21561
+    authors: Anton Baumann, <strong>Akmal Ashirmatov</strong>, Leo Schmidt-Traub, Frederike Lübeck, Jonas Hübotter, Thomas Kleine Buening, Andreas Krause
+    workshop: FLLMPT
+    conference: NeurIPS 2026
+    image: ./assets/img/papers/repulsive-attractive-teachers.png
+    image_alt: "Visual abstract of contrastive self-distillation: attractive and repulsive teacher signals separate correct and incorrect answers from student behavior."
+    links:
+      - label: Preprint
+        url: https://arxiv.org/abs/2609.21561
+      - label: Blog Post
+        url: https://self-distillation.github.io/repulsive_attractive.html
+    awards:
+      - kind: Poster
+
+  - title: "Test-Time Scaling with Weak Verifiers via Self-Play"
+    url: https://openreview.net/forum?id=oYX0DXuv7a
+    authors: Akira Yoshiyama*, <strong>Akmal Ashirmatov*</strong>, Jonas Hübotter, Ido Hakimi, Andreas Krause
+    workshop: DL4C
+    conference: ICML 2026
+    note: "*equal contribution"
+    image: ./assets/img/papers/self-play-weak-verifiers.png
+    image_alt: "Self-play framework: a proposer and a solver share one base model; the proposer is rewarded for problems the solver solves about half the time, and the solver for solving them."
+    links:
+      - label: OpenReview
+        url: https://openreview.net/forum?id=oYX0DXuv7a
+    awards:
+      - kind: Poster
+
+  - title: "ESCAPE – Explaining Stable Diffusion via Cross Attention Maps and Prompt Editing"
+    url: https://visxai.io/2025
+    authors: Diego Zafferani*, Giovanni De Muri*, Johanna Hedlund Lindmar*, <strong>Akmal Ashirmatov*</strong>, Sinie van der Ben, Rita Sevastjanova, Mennatallah El-Assady
+    venue: IEEE VIS 2025 · VISxAI workshop
+    note: "*equal contribution"
+    image: ./assets/img/papers/escape.png
+    image_alt: "ESCAPE pipeline: submit a prompt, edit it by adding, swapping or reweighting words, edit cross-attention maps, and compare the resulting images."
+    links:
+      - label: Workshop
+        url: https://visxai.io/2025
