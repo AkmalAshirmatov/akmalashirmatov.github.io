@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I'm an M.Sc. student in Computer Science at [ETH Zürich](https://ethz.ch/en.html), working on LLM post-training methods in Prof. [Andreas Krause](https://las.inf.ethz.ch/krausea)'s [Learning & Adaptive Systems group](https://las.inf.ethz.ch/). I'm supervised by Jonas Hübotter, Frederike Lübeck and Thomas Kleine Buening. My recent work focuses on self-distillation for reasoning and self-play for code generation.
+I'm an M.Sc. student in Computer Science at ETH Zürich, working on LLM post-training methods in Prof. [Andreas Krause](https://las.inf.ethz.ch/krausea)'s [Learning & Adaptive Systems group](https://las.inf.ethz.ch/). I'm supervised by Jonas Hübotter, Frederike Lübeck and Thomas Kleine Buening. My recent work focuses on self-distillation for reasoning and self-play for code generation.
 
 Previously, I interned at Google in London, where I designed and prototyped a new tool and contributed code to the [**Gemini Live**](https://gemini.google/overview/gemini-live/) agent harness, and at Huawei's Zurich Research Center, where I worked on kernel-level optimization for LLM inference.
 
