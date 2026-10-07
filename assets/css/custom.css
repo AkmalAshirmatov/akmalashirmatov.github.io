@@ -1,5 +1,8 @@
 /* Additions on top of the Minimal Light theme. */
 
+/* Bold text inside links follows the link color, including on hover. */
+a strong { color: inherit; }
+
 /* ---- Publications ---- */
 .publications { margin-top: 0; }
 .publications ol.bibliography li { margin-bottom: 1.6rem; }
