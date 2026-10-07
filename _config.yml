@@ -26,8 +26,8 @@ enable_footnote: false
 # Automatic dark theme (follows the visitor's system setting)
 auto_dark_mode: false
 
-# Font: "Serif" or "Sans Serif"
-font: "Serif"
+# Font: "Serif", "Sans Serif", or "Mixed" (sans-serif body, serif headings)
+font: "Mixed"
 
 # Files that are not published
 exclude:
