@@ -13,9 +13,9 @@ Always happy to chat-feel free to reach out!
 ## News
 
 - **Sept. 2026:** Our paper *On Repulsive and Attractive Teachers* was accepted to the FLLMPT workshop at NeurIPS 2026! Read our [blog post](https://self-distillation.github.io/repulsive_attractive.html).
-- **Jun. 2026:** Started a SWE internship with Google's Applied Research team in London.
+- **Jun. 2026:** Started a SWE internship at Google in London.
 - **Jun. 2026:** Our paper *Test-Time Scaling with Weak Verifiers via Self-Play* was accepted to the DL4C workshop at ICML 2026!
-- **Nov. 2025:** Presented *ESCAPE* at the VISxAI workshop at IEEE VIS 2025 in Vienna.
+- **Nov. 2025:** Presented *ESCAPE* at the VISxAI 2025 workshop in Vienna.
 - **Jun. 2025:** Started an internship at Huawei's Zurich Research Center.
 
 ## Publications
@@ -28,7 +28,7 @@ Always happy to chat-feel free to reach out!
   <li class="experience-entry">
     <img class="company-logo" src="{{ '/assets/img/companies/google.png' | relative_url }}" alt="" width="24" height="24">
     <div>
-      <div class="entry-head"><span><strong>Google</strong>, London · SWE Intern, Applied Research team</span><span class="entry-date">Jun. – Sep. 2026</span></div>
+      <div class="entry-head"><span><strong>Google</strong>, London · SWE Intern</span><span class="entry-date">Jun. – Sep. 2026</span></div>
       <div class="entry-body">Designed and prototyped a new tool and contributed code to the <a href="https://gemini.google/overview/gemini-live/" target="_blank" rel="noopener"><strong>Gemini Live</strong></a> agent harness.</div>
     </div>
   </li>
