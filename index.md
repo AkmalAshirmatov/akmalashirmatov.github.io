@@ -36,7 +36,7 @@ Always happy to chat-feel free to reach out!
     <img class="company-logo" src="{{ '/assets/img/companies/huawei.svg' | relative_url }}" alt="" width="24" height="24">
     <div>
       <div class="entry-head"><span><strong>Huawei</strong>, Zurich Research Center · Research Intern</span><span class="entry-date">Jun. – Sep. 2025</span></div>
-      <div class="entry-body">LLM inference optimization with Triton and vLLM: hardware profiling, IR-level debugging.</div>
+      <div class="entry-body">LLM inference optimization with Triton: hardware profiling, IR-level debugging.</div>
     </div>
   </li>
 </ul>
