@@ -21,6 +21,30 @@
     <meta property="og:url" content="{{ site.canonical | escape }}">
     {% endif %}
 
+    {% assign profile_urls = "" | split: "" %}
+    {% if site.github_link %}{% assign profile_urls = profile_urls | push: site.github_link %}{% endif %}
+    {% if site.google_scholar %}{% assign profile_urls = profile_urls | push: site.google_scholar %}{% endif %}
+    {% if site.linkedin %}{% assign profile_urls = profile_urls | push: site.linkedin %}{% endif %}
+    {% if site.twitter %}{% assign profile_urls = profile_urls | push: site.twitter %}{% endif %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "@id": {{ site.canonical | append: "#profile" | jsonify }},
+      "url": {{ site.canonical | jsonify }},
+      "mainEntity": {
+        "@type": "Person",
+        "@id": {{ site.canonical | append: "#person" | jsonify }},
+        "name": {{ site.title | jsonify }},
+        "alternateName": {{ site.profile_username | jsonify }},
+        "url": {{ site.canonical | jsonify }},
+        "description": {{ site.description | jsonify }},
+        "image": {{ site.avatar | absolute_url | jsonify }},
+        "sameAs": {{ profile_urls | jsonify }}
+      }
+    }
+    </script>
+
     <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml" />
 
     

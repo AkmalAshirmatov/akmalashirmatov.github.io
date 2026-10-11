@@ -9,6 +9,9 @@ email: akmalashirmatov@gmail.com
 keywords: Akmal Ashirmatov, ETH Zurich, LLM post-training, self-distillation, reasoning, self-play, code generation, reinforcement learning, machine learning
 description: Akmal Ashirmatov — M.Sc. student at ETH Zürich working on LLM post-training, self-distillation for reasoning, and self-play for code generation.
 canonical: https://akmalashirmatov.github.io/
+url: https://akmalashirmatov.github.io
+baseurl: ""
+profile_username: AkmalAshirmatov
 
 # Links (delete a line to hide its icon)
 google_scholar: https://scholar.google.com/citations?user=TgXmbVgAAAAJ

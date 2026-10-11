@@ -10,6 +10,8 @@ Previously, I interned at Google in London, where I designed and prototyped a ne
 
 Always happy to chat-feel free to reach out!
 
+Find my publications on [Google Scholar]({{ site.google_scholar }}) and my code on [GitHub]({{ site.github_link }}).
+
 ## News
 
 - **Sept. 2026:** Our paper *On Repulsive and Attractive Teachers* was accepted to the FLLMPT workshop at NeurIPS 2026! Read our [blog post](https://self-distillation.github.io/repulsive_attractive.html).
