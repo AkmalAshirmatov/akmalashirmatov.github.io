@@ -1,25 +1,32 @@
 \documentclass[10pt]{article}
 
+% Compile with pdfLaTeX. This file is self-contained.
+% Red \todo{...} markers flag facts only you can confirm. Before submitting,
+% set \showtodosfalse below (markers then print as plain text) and search the
+% file for "\todo" to make sure none are left.
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[left=0.45in, right=0.45in, bottom=0.45in, top=0.45in]{geometry}
 \usepackage{latexsym}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage[pdftex]{hyperref}
-\hypersetup{hidelinks}
+\hypersetup{
+    hidelinks,
+    hypertexnames=false,
+    pdftitle={Akmal Ashirmatov -- Academic CV},
+    pdfauthor={Akmal Ashirmatov}
+}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
 \urlstyle{same}
 \raggedbottom
 \raggedright
@@ -27,158 +34,153 @@
 \setlength{\footskip}{5pt}
 \pagenumbering{gobble}
 
-\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+\titleformat{\section}{\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{4.5pt}{2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{0.94}
 
-\newcommand{\resumeItem}[1]{\item #1 \vspace{-4pt}}
-\newcommand{\resumeItemTwo}[2]{\item \textbf{#1} \textit{\small #2}\vspace{-4pt}}
-\newcommand{\resumeTimeItem}[2]{\item\begin{tabular*}{0.97\textwidth}{@{}p{0.76\textwidth}@{\extracolsep{\fill}}r@{}}#1 & \textit{\small #2} \\\end{tabular*}\vspace{-5pt}}
-\newcommand{\resumeSubheading}[3]{\item\begin{tabular*}{0.97\textwidth}{@{}p{0.74\textwidth}@{\extracolsep{\fill}}r@{}}\textbf{#1} {\textit{\small #2}} & \textit{\small #3} \\\end{tabular*}\vspace{-4pt}}
+\newif\ifshowtodos
+\showtodostrue
+\newcommand{\todo}[1]{\ifshowtodos\textcolor{red}{[#1]}\else#1\fi}
+
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeItemTwo}[2]{\item\textbf{#1} \textit{\small #2}}
+\newcommand{\resumeTimeItem}[2]{%
+    \item\begin{tabularx}{\linewidth}[t]{@{}X@{\hspace{0.8em}}r@{}}%
+    #1 & \textit{\small #2}\\
+    \end{tabularx}\par}
+\newcommand{\resumeSubheading}[3]{%
+    \item\begin{tabularx}{\linewidth}[t]{@{}X@{\hspace{0.8em}}r@{}}%
+    \textbf{#1} \textit{\small #2} & \textit{\small #3}\\
+    \end{tabularx}\par}
+% Publication: [label] title (linked), then authors, then venue.
+\newcommand{\pub}[4]{%
+    \item[{[#1]}] \textbf{#2}\\
+    #3\\
+    \textit{#4}}
 \renewcommand{\labelitemii}{$\circ$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=1.2em,topsep=0pt,partopsep=0pt,itemsep=1pt,parsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\vspace{-5pt}\begin{itemize}[leftmargin=1.2em]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.2em,topsep=0pt,partopsep=0pt,itemsep=0pt,parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 \newcommand{\linked}[2]{%
     \href{#1}{#2\nobreak\hspace{0.15em}%
-    \textcolor{MidnightBlue}{\raisebox{0.2ex}{\scriptsize$\nearrow$}}}%
-}
+    \textcolor{MidnightBlue}{\raisebox{0.2ex}{\scriptsize$\nearrow$}}}}
 
 \begin{document}
 
 \begin{center}
-    {\Large \textbf{Akmal Ashirmatov}}\\[-1pt]
-    \href{mailto:akmalashirmatov@gmail.com}{akmalashirmatov@gmail.com} $\mid$ \href{https://www.linkedin.com/in/akmal-ashirmatov}{LinkedIn} $\mid$ \href{https://openreview.net/profile?id=~Akmal_Ashirmatov1}{OpenReview}\\[-1pt]
-    \textit{M.Sc. Computer Science, ETH Z\"urich $\mid$ LLM post-training, test-time scaling, agentic systems, multimodal generation}
+    {\Large\textbf{Akmal Ashirmatov}}\\[-1pt]
+    \href{mailto:akmalashirmatov@gmail.com}{akmalashirmatov@gmail.com}
+    $\mid$ \href{https://akmalashirmatov.github.io/}{Website}
+    $\mid$ \href{https://scholar.google.com/citations?user=TgXmbVgAAAAJ}{Google Scholar}
+    $\mid$ \href{https://github.com/AkmalAshirmatov}{GitHub}
+    $\mid$ \href{https://www.linkedin.com/in/akmal-ashirmatov}{LinkedIn}
+    $\mid$ \href{https://openreview.net/profile?id=~Akmal_Ashirmatov1}{OpenReview}\\[1pt]
+    \textit{Research interests: LLM post-training, reasoning, test-time scaling, learning from environment feedback, efficient inference}
 \end{center}
 \vspace{-10pt}
 
 \section{Education}
 \resumeSubHeadingListStart
-    \resumeSubheading{ETH Z\"urich}{M.Sc. Computer Science, GPA 5.93/6.0}{Sep. 2024 -- Apr. 2027 exp.}
+    \resumeSubheading{ETH Z\"urich}{M.Sc. Computer Science, GPA 5.93/6.0}{Sep. 2024 -- May 2027 (exp.)}
         \resumeItemListStart
-        \resumeItem{Selected coursework: Probabilistic AI, Advanced ML, Reliable and Trustworthy AI, Large-Scale AI Engineering, Computer Vision, Algorithms Lab.}
+        \resumeItem{MSc thesis (in progress) in the Learning \& Adaptive Systems (LAS) group of Prof.\ Andreas Krause.}
+        \resumeItem{Selected coursework: Probabilistic AI, Advanced ML, Reliable and Trustworthy AI, Large-Scale AI Engineering.}
         \resumeItemListEnd
-    \resumeSubheading{Technical University of Munich}{M.Sc. Data Engineering and Analytics, 1 semester}{Apr. 2024 -- Sep. 2024}
+    \resumeSubheading{Technical University of Munich}{M.Sc. Data Engineering \& Analytics (1 semester)}{Apr. 2024 -- Sep. 2024}
     \resumeSubheading{Lomonosov MSU Tashkent}{B.Sc. Applied Mathematics \& CS, with Honors, GPA 5.00/5.00}{2018 -- 2022}
-\resumeSubHeadingListEnd
-
-\section{Publications}
-\resumeSubHeadingListStart
-    \resumeSubheading
-        {\linked{https://self-distillation.github.io/repulsive_attractive.html}
-        {On Repulsive and Attractive Teachers: Separating Correctness from Behavior in Self-Distillation}}
-        {FLLMPT @ NeurIPS 2026}
-        {2026}
         \resumeItemListStart
-        \resumeItem{Anton Baumann, \textbf{Akmal Ashirmatov}, Leo Schmidt-Traub, Frederike L\"ubeck, Jonas H\"ubotter, Thomas Kleine Buening, Andreas Krause}
-        \resumeItem{Studied attractive, repulsive, and contrastive self-distillation, showing that contrastive teachers cancel unintended behavioral shifts and improve reasoning.}
-        \resumeItemListEnd
-
-    \resumeSubheading
-        {\linked{https://openreview.net/forum?id=oYX0DXuv7a}
-        {Test-Time Scaling with Weak Verifiers via Self-Play}}
-        {DL4C @ ICML 2026}
-        {2026}
-        \resumeItemListStart
-        \resumeItem{Akira Yoshiyama*, \textbf{Akmal Ashirmatov}*, Jonas H\"ubotter, Ido Hakimi, Andreas Krause}
-        \resumeItem{Self-play proposer-solver framework for improving code-generation models with weak verifier and environment feedback.}
-        \resumeItemListEnd
-
-    \resumeSubheading
-        {\linked{https://visxai.io/2025}
-        {ESCAPE – Explaining Stable Diffusion via Cross Attention Maps and Prompt Editing}}
-        {VISxAI 2025}
-        {2025}
-        \resumeItemListStart
-        \resumeItem{Diego Zafferani*, Giovanni De Muri*, Johanna Hedlund Lindmar*, \textbf{Akmal Ashirmatov}*, Sinie van der Ben, Rita Sevastjanova, Mennatallah El-Assady}
-        \resumeItem{Built an interactive system for cross-attention visualization and Prompt-to-Prompt-style localized image editing.}
+        \resumeItem{Thesis: Increasing the efficiency of person recognition in images with artificial neural networks.}
         \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+\section{Publications {\normalfont\small\hfill * equal contribution}}
+\begin{itemize}[leftmargin=2.2em,labelsep=0.4em,topsep=0pt,partopsep=0pt,itemsep=2pt,parsep=0pt]
+    \pub{P1}
+        {\linked{https://self-distillation.github.io/repulsive_attractive.html}{On Repulsive and Attractive Teachers: Separating Correctness from Behavior in Self-Distillation}}
+        {Anton Baumann, \textbf{Akmal Ashirmatov}, Leo Schmidt-Traub, Frederike L\"ubeck, Jonas H\"ubotter, Thomas Kleine Buening, Andreas Krause}
+        {FLLMPT Workshop at NeurIPS 2026}
+    \pub{P2}
+        {\linked{https://openreview.net/forum?id=oYX0DXuv7a}{Test-Time Scaling with Weak Verifiers via Self-Play}}
+        {Akira Yoshiyama*, \textbf{Akmal Ashirmatov}*, Jonas H\"ubotter, Ido Hakimi, Andreas Krause}
+        {DL4C Workshop at ICML 2026}
+    \pub{P3}
+        {\linked{https://visxai.io/2025}{ESCAPE: Explaining Stable Diffusion via Cross-Attention Maps and Prompt Editing}}
+        {Diego Zafferani*, Giovanni De Muri*, Johanna Hedlund Lindmar*, \textbf{Akmal Ashirmatov}*, Sinie van der Ben, Rita Sevastjanova, Mennatallah El-Assady}
+        {VISxAI Workshop at IEEE VIS 2025}
+\end{itemize}
 
-\section{Experience}
+\section{Research Experience}
 \resumeSubHeadingListStart
-    \resumeSubheading{SWE Intern, Applied Research team}{Google, London}{Jun. 2026 -- Sep. 2026}
+    \resumeSubheading{MSc Thesis, LAS, ETH Z\"urich}{with F.\ L\"ubeck, A.\ Baumann, A.\ Krause}{Oct. 2026 -- May 2027 (exp.)}
         \resumeItemListStart
-        % \resumeItem{Prototyping video-generation capabilities for Gemini Live and contributing implementation code to the Gemini app codebase.}
-        % \resumeItem{Authored a design document for integrating video generation as a new tool into the existing agent harness.}
-        \resumeItem{Designed and prototyped a new generative tool for Gemini Live and contributed code to the Gemini app codebase.}
-        \resumeItem{Authored a design document for integrating the tool into the existing agent harness.}
+        % \resumeItem{Post-training LLMs to acquire new knowledge from novel environments, beyond behavioral adaptation.}
+        \resumeItem{Post-training LLMs to reason about their uncertainty.}
         \resumeItemListEnd
-    % \resumeSubheading{Research Assistant, Learning and Adaptive Systems Group}{ETH Z\"urich}{Nov. 2025 -- Jun. 2026}
-    %     \resumeItemListStart
-    %     \resumeItem{Research on post-training LLMs with self-distillation policy optimization, supervised by Jonas H\"ubotter in Prof. Andreas Krause's group.}
-    %     \resumeItemListEnd
-    % \resumeSubheading{Research Assistant, Learning and Adaptive Systems Group}{ETH Z\"urich}{Nov. 2025 -- Jun. 2026}
-    %     \resumeItemListStart
-    %     \resumeItem{Research on post-training LLMs with self-distillation policy optimization.}
-    %     \resumeItemListEnd
-    % \resumeSubheading{Teaching Assistant, Probabilistic Artificial Intelligence}{ETH Z\"urich}{Sep. 2025 -- Feb. 2026}
-    %     \resumeItemListStart
-    %     \resumeItem{TA for PAI in the Learning and Adaptive Systems Group (Prof. Andreas Krause), supporting PAI (probabilistic Artificial Intelligience) course delivery.}
-    %     \resumeItemListEnd
-    \resumeSubheading{Research Intern, Zurich Research Center}{Huawei}{Jun. 2025 -- Sep. 2025}
+    \resumeSubheading{Research Assistant, LAS, ETH Z\"urich}{with J.\ H\"ubotter, F.\ L\"ubeck, T.\ Kleine Buening, A.\ Krause}{Mar. 2026 -- Jul. 2026}
         \resumeItemListStart
-        \resumeItem{Worked on LLM inference optimization using Triton and vLLM; performed hardware profiling, ML compiler optimization, and IR-level debugging.}
+        \resumeItem{Characterized behavioral biases in LLM self-distillation; showed contrastive self-distillation mitigates them and improves reasoning without an auxiliary GRPO objective [P1].}
+        \resumeItemListEnd
+    \resumeSubheading{Semester Project, LAS, ETH Z\"urich}{with J.\ H\"ubotter, I.\ Hakimi, A.\ Krause}{Dec. 2025 -- May 2026}
+        \resumeItemListStart
+        \resumeItem{Co-trained a proposer and a solver via self-play for code generation from weak verifiers and environment feedback; beats context evolvement and rejection sampling at test time [P2].}
+        \resumeItemListEnd
+    \resumeSubheading{Course Research Project, IVIA Lab, ETH Z\"urich}{with M.\ El-Assady}{Mar. 2025 -- Jul. 2025}
+        \resumeItemListStart
+        % \resumeItem{Studied how geometry-preserving prompt edits change cross-attention in Stable Diffusion; built its backend [P3].}
+        \resumeItem{Built a framework to study how geometry-preserving prompt edits change cross-attention in Stable Diffusion [P3].}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Industry Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading{Google, London}{SWE Intern, Applied Research team}{Jun. 2026 -- Sep. 2026}
+        \resumeItemListStart
+        \resumeItem{Designed and prototyped a generative tool for Gemini Live and contributed production code to the Gemini app.}
+        \resumeItem{Wrote the design document for integrating the tool into the existing agent harness.}
+        \resumeItemListEnd
+    \resumeSubheading{Huawei, Zurich Research Center}{Research Intern}{Jun. 2025 -- Sep. 2025}
+        \resumeItemListStart
+        \resumeItem{LLM inference optimization with Triton and vLLM; profiling, ML compiler optimization, IR debugging.}
         \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 \section{Selected Projects}
 \resumeSubHeadingListStart
     \resumeSubheading
-        {\linked{https://github.com/AkmalAshirmatov/peft_apertus}
-        {Distributed PEFT for Legal LLMs}}
-        {Apertus 8B/70B}
-        {2026}
+        {\linked{https://github.com/AkmalAshirmatov/peft_apertus}{Distributed Fine-Tuning of Apertus for Legal Text}}
+        {Large-Scale AI Engineering, ETH}{2026}
         \resumeItemListStart
-        \resumeItem{Built a PEFT/SFT pipeline with LoRA and full fine-tuning; ran multi-node Accelerate + DeepSpeed training with DDP/ZeRO-2/ZeRO-3.}
-        \resumeItemListEnd
-    \resumeSubheading{Network Certification \& Robustness}{Reliable and Trustworthy AI}{2026}
-        \resumeItemListStart
-        \resumeItem{Certified encoder/decoder properties via MILP (Gurobi) and DeepPoly relaxations; added PGD-based adversarial defense training.}
-        \resumeItemListEnd
-    \resumeSubheading{3D Vehicle Detection from LiDAR Point Clouds}{1st place in class}{2026}
-        \resumeItemListStart
-        \resumeItem{Redesigned second-stage RoI refinement with proposal-aligned canonical transforms, point-wise/geometric features, and IoU-aware scoring.}
-        \resumeItemListEnd
-    \resumeSubheading{Music Semantic Search}{}{2025}
-        \resumeItemListStart
-        \resumeItem{Trained retrieval embeddings from CQT spectrograms using triplet loss with hard negative mining; an end-to-end cover-song retrieval pipeline.}
-        \resumeItemListEnd
-    \resumeSubheading
-        {\linked{https://github.com/AkmalAshirmatov/sentiment-analysis}
-        {Text Classification with Test-Time Augmentation \& Selective Reasoning}}
-        {}
-        {2025}
-        \resumeItemListStart
-        \resumeItem{Applied TTA via 4 paraphrases with weighted ensembling. Added selective LLM reasoning for uncertain cases}
+        \resumeItem{LoRA/full fine-tuning of Apertus 8B/70B on legal data; multi-node DeepSpeed ZeRO-2/3 training.}
         \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-% \section{Education}
-% \resumeSubHeadingListStart
-%     \resumeSubheading{ETH Z\"urich}{M.Sc. Computer Science, GPA 5.93/6.0}{Sep. 2024 -- Apr. 2027 exp.}
-%         \resumeItemListStart
-%         \resumeItem{Selected coursework: Probabilistic AI, Advanced ML, Reliable and Trustworthy AI, Large-Scale AI Engineering, Computer Vision, Algorithms Lab.}
-%         \resumeItemListEnd
-%     \resumeSubheading{Technical University of Munich}{M.Sc. Data Engineering and Analytics, 1 semester}{Apr. 2024 -- Sep. 2024}
-%     \resumeSubheading{Lomonosov MSU Tashkent}{B.Sc. Applied Mathematics \& CS, with Honors, GPA 5.00/5.00}{2018 -- 2022}
-% \resumeSubHeadingListEnd
+\section{Teaching \& Service}
+\resumeSubHeadingListStart
+    \resumeSubheading{Teaching Assistant, Probabilistic Artificial Intelligence}{ETH Z\"urich, A.\ Krause}{Sep. 2025 -- Feb. 2026}
+        \resumeItemListStart
+        \resumeItem{Built the course's new interactive demo on diffusion models.}
+        \resumeItemListEnd
+    \resumeSubheading{Competitive Programming Coach and Organizer}{Lomonosov MSU Tashkent}{2019 -- 2023}
+        \resumeItemListStart
+        \resumeItem{Lectured on algorithms and trained ICPC teams; led Uzbekistan's team at APIO; chaired the Lomonosov Festival jury.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Honors \& Awards}
+\resumeSubHeadingListStart
+    \resumeTimeItem{\textbf{ICPC}: 3$\times$ national champion of Uzbekistan; 2$\times$ NERC 2nd-degree diploma (4th and 5th in Central Asia)}{2019 -- 2023}
+    \resumeTimeItem{\textbf{Huawei iRunner}: 6$\times$ prize-winner in international heuristic optimization contests}{2022 -- 2025}
+    \resumeTimeItem{Ranked in the top 1.3\% of all participants in Meta Hacker Cup, top 1.9\% in Google Code Jam, top 0.8\% in CodeChef SnackDown; \linked{https://codeforces.com/profile/Capitan}{Codeforces Master}}{2021 -- 2022}
+    \resumeTimeItem{1st place, Republican Olympiad in Informatics, Uzbekistan}{2022}
+\resumeSubHeadingListEnd
 
 \section{Skills}
 \resumeSubHeadingListStart
-    \resumeItemTwo{ML/LLM:}{PyTorch, Hugging Face, vLLM, verl, GRPO/RLHF-style training, LoRA/PEFT, W\&B}
-    \resumeItemTwo{Systems:}{Python, C/C++, Triton, Bash, Linux, Docker, Kubernetes, Ray, DeepSpeed, Spark, GCP, HPC/Slurm}
-    % \resumeItemTwo{Interests:}{test-time scaling, code agents, multimodal/visual AI, efficient inference, trustworthy AI, 3D vision}
-\resumeSubHeadingListEnd
-
-\section{Awards \& Competitions}
-\resumeSubHeadingListStart
-    \resumeTimeItem{ICPC Uzbekistan: 1st, 2nd, 1st, 1st place; 3-time National champion}{2019 -- 2022}
-    \resumeTimeItem{ICPC NERC: 2$\times$ 2nd-degree diploma; 4th and 5th in Central Asia}{2021 -- 2023}
-    \resumeTimeItem{\linked{https://codeforces.com/profile/Capitan}{Codeforces: Master, peak rating 2124}}{}
-    \resumeTimeItem{Meta Hacker Cup top 1.3\%, Google Code Jam top 1.9\%, CodeChef SnackDown top 0.8\%}{2021 -- 2022}
-    \resumeTimeItem{Huawei iRunner: 6$\times$ prize-winner across 8 countries; high-performance heuristic optimization}{2022 -- 2025}
+    \resumeItemTwo{ML/LLM:}{PyTorch, Hugging Face, vLLM, verl, LoRA/PEFT, W\&B}
+    \resumeItemTwo{Systems:}{Python, C/C++, Triton, Bash, Linux, Docker, Kubernetes, Ray, DeepSpeed, GCP, HPC/Slurm}
 \resumeSubHeadingListEnd
 
 \end{document}
